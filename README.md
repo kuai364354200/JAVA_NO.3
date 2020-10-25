@@ -81,5 +81,5 @@ java第三次实验
          in.close();
         }
 五、程序截图
-
+![image](https://github.com/kuai364354200/JAVA_NO.3/blob/main/QQ%E5%9B%BE%E7%89%8720201025224026.png)
     
