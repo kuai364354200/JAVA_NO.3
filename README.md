@@ -27,7 +27,7 @@ java第三次实验
 四、核心代码：
 =
 这部分代码是与选课退课部分相关的代码，用scanner打开输入窗口，让用户输入123来选择课程，然后利用if先判断是否选到课，用while判断是否能退课（没选的课不能退），用break结束循环。最后         多用了一个if和else判断是否有输入错误，结束了之后把scanner关掉。
--
+            Scanner in = new Scanner(System.in);
             System.out.println("请输入1,2,3进行选课: ");
             int y = in.nextInt();
             while (x == 1)      //确保只能退已选课程
@@ -65,26 +65,32 @@ java第三次实验
                     s = g;
                     break;
                 }
-            Student o = new Student(2019310200, "王畅", 'M',a);
+            Student o = new Student(201913131, "奥里给", 'M',a);
             System.out.println(o);
 
             System.out.println("输入1或者2选择继续选退课或者退出");
             int z = in.nextInt();
-            while (z == 1) {
-                System.out.println("继续选课");
-                break;
+            int abc = 1;
+            while (abc == 1) {
+                if(z == 1){
+                    System.out.println("继续选课");
+                    break;
+                }
+                if (z == 2) {
+                    flag = 0;
+                    System.out.println("退出");
+                    break;
+                }
+                else {
+                    flag = 0;
+                    System.out.println("输入错误！系统将自动退出！");
+                    break;
+                }
+
 
             }
-            if (z == 2) {
-                flag = 0;
-                System.out.println("退出");
-            }
-            else {
-            	flag = 0;
-            	System.out.println("输入错误！系统将自动退出！");
-            }
-         in.close();
         }
+        in.close();
 五、程序截图
 =
 ![image](https://github.com/kuai364354200/JAVA_NO.3/blob/main/QQ%E5%9B%BE%E7%89%8720201025224026.png)
